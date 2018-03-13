@@ -12,7 +12,7 @@
         header {
             padding: 1em;
             position: relative;
-            background:lightblue;
+            background: lightblue;
         }
 
         .selfpic i {
@@ -57,16 +57,13 @@
             clear: both;
         }
 
-        /* @media (max-width:900px)and(min-width:740px) {
-            div.row {
-                width: 48%;
-            }
-        } */
+
 
         @media (max-width:740px) {
             div.row,
             div.selfpic {
                 width: 100%;
+                padding: 5px;
             }
         }
 
@@ -101,14 +98,14 @@
         div.sidebar::after {
             content: "";
             width: 1px;
-            height: 106%;
+            height: 109%;
             background-color: #979797;
             display: block;
             margin-left: 4.5px;
             z-index: 0;
             position: absolute;
             left: 0px;
-            top: 1.5em;
+            top: 1.6em;
         }
 
         div.sidebarl::before {
@@ -138,12 +135,12 @@
             color: black;
             margin: 1em, 0px;
             border-left: 5px lightblue solid;
+            text-decoration: underline;
 
         }
 
         div.content {
             margin-left: 2em;
-            /* width: inherit; */
             padding: 0.5em;
             position: relative;
         }
@@ -151,11 +148,25 @@
         .bl {
             border-bottom: 2px #ccc solid;
         }
+
         h1,
         h2 {
             text-align: center;
             margin-bottom: 0px;
             width: 100%;
+        }
+
+        div.bluebox {
+            padding: 1em;
+            background: lightblue;
+        }
+
+        div.bluebox>div {
+            padding: 0em 2em;
+        }
+
+        .bluebox p {
+            text-indent: 20px;
         }
     </style>
 </head>
@@ -165,17 +176,22 @@
         <header class="block">
             <img src="img/selfpic.jpg" alt="" class="selfpic">
             <div class="selfpic">
-                <i class="fab fa-facebook-square fa-2x"></i>
-                <i class="fab fa-wordpress fa-2x"></i>
-                <i class="fab fa-line fa-2x"></i>
-                <a href="opann.lin@gmail.com">
-                    <i class="fas fa-envelope-square fa-2x"></i>
+                <a href="https://www.facebook.com/opann.lin?ref=bookmarks" target="_blank">
+                    <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+                <a href="http://opann.wordpress.com" target="_blank">
+                <i class="fab fa-wordpress fa-2x"></i></a>
+                <i class="fas fa-phone-square fa-2x" title="0912-689-669"></i>
+                <a href="#">
+                    <i class="fas fa-envelope-square fa-2x" title="opann.lin@gmail.com"></i>
                 </a>
                 <h3>林俊安 OPAnn lin</h3>
                 <p>曾經為LED廠工程師,不甘整天做報告, 毅然決然辭掉工作後改作股票投資.
                     <br>喜歡爬山, 爬過八座百岳, 喜歡上健身房, 也喜歡宅在家聽音樂打電動, 可動可靜(?)
-                    <br>覺得最難的問題是今天午餐要吃什麼?
-                    <br>目前在CMoney戰鬥營閉關修練中.. </p>
+                    <br>目前在CMoney戰鬥營閉關修練中..
+                    <br>喜歡的一句話:
+                    <b>全心全力做一件事, 你才知道你有多厲害!</b>
+                </p>
             </div>
         </header>
         <div class="block">
@@ -230,9 +246,8 @@
             <div class="row">
                 <h3 class="subtitle s2">會什麼??</h3>
                 <div>
-                    <!-- <div class="sidebar"> -->
                     <div class="content">
-                        <h3 class="title bl">我會打電腦</h3>
+                        <h3 class="title bl">我會用電腦</h3>
                         <ul>
                             <li>Microsoft Excel</li>
                             <li>Microsoft Word</li>
@@ -240,23 +255,19 @@
                             <li>AutoCAD 2010</li>
                         </ul>
                     </div>
-                    <!-- </div> -->
                 </div>
                 <div>
-                    <!-- <div class="sidebar"> -->
                     <div class="content">
                         <h3 class="title bl">還會跟外國人喇哩</h3>
                         <ul>
-                            <li>中文</li>
-                            <li>英文</li>
-                            <li>日文</li>
+                            <li>中文 這當然</li>
+                            <li>英文 還可以</li>
+                            <li>日文 ok的</li>
                             <li>一點點的韓文</li>
                         </ul>
                     </div>
-                    <!-- </div> -->
                 </div>
                 <div>
-                    <!-- <div class="sidebarl"> -->
                     <div class="content">
                         <h3 class="title bl">擅長這些..</h3>
                         <ul>
@@ -264,11 +275,26 @@
                             <li>Excel VBA</li>
                         </ul>
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
+        <div class="bluebox block">
+            <div>
+                <h3 class="subtitle">關於我</h3>
+
+                <p>土生土長的嘉義人, 家中有父母及兩個妹妹. 從小興趣玩模型 組電腦 玩電動, 13歲時買了第一台PC: Acer的Aspire 之後便與電腦結下不解之緣. 現在則是喜歡 登山 健身等戶外的運動, 爬過幾個百岳,
+                    最喜歡登山時山上的風景, 看到pm2.5在腳下的感覺很舒壓~</p>
+                <p>大學畢業後, 進入LED界工作, 剛好是個整天跟電腦打招呼的職位, 每天就是與Excel跟Powerpoint奮戰, 整理上萬筆的資料弄出一份老闆看得懂的報告.第一份老闆交代的工作是要把每週又臭又長的報表,使用Excel
+                    VBA讓他自動跑出我們想要的資料及圖表, 自此買了幾本書來啃後,便在一週內完成了老闆的要求.自此之後維護報表程式以及自動化報表的工作就落在我身上, 也發現了自己對寫程式這件事情的興趣</p>
+                <p>
+                    在LED業界待久了後, 厭倦這個整天與報告為伍的工作, 決定辭職回家跟家父學投資理財的方法, 因為本身擅長做資料整理, 且本人認為拿數據說話的可靠性較高,S所以希望能取得一些大盤的資料來自己研究, 此時發現了Cmoney這家公司的軟體與我的想法非常吻合.
+                </p>
+                <p>現在, 因為看到CMoney正在徵求一群對寫程式有熱誠的人, 便義無反顧的全新投入在這個寫程式的汪洋大海之中..</p>
+            </div>
+        </div>
     </div>
+
+
 </body>
 
 </html>
