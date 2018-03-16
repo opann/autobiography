@@ -1,94 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         * {
             box-sizing: border-box;
             font-family: Microsoft JhengHei;
         }
 
-        header {
-            padding: 1em;
-            position: relative;
-            background: steelblue;
-            /* color: #ccc; */
+        body {
+            background-color: #ddd;
+            margin: 0px;
         }
 
-        .selfpic i {
-            color: #ccc;
-            float: right;
-            margin-right: 0.5em;
-        }
-
-        header p {
-            line-height: 1.5;
-        }
-
-        img.selfpic {
-            display: block;
-            width: 170px;
-            float: left;
-            border: rgb(7, 57, 107) solid 2px;
-        }
-
-        div.selfpic {
-            float: left;
-            padding-left: 4em;
-        }
-
-        div.col {
-            width: 50%;
-            float: left;
-            padding: 10px;
-        }
-
-        div.container {
-            max-width: 960px;
-            margin: auto;
-            box-shadow: 0 0 5px 5px grey;
-            overflow: hidden;
-        }
-
-        .block::after {
+        .row::after {
             content: "";
             display: table;
             clear: both;
         }
 
-
-
-        @media (max-width:650px) {
-            div.col,
-            div.selfpic {
-                width: 100%;
-                padding: 5px;
-            }
+        nav {
+            overflow: hidden;
+            background: rgba(33, 33, 33, 0.5);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
         }
 
-        @media (max-width:650px) {
-            img.selfpic {
-                float: none;
-            }
+        nav a {
+            font-size: 1.5vw;
+            display: block;
+            float: left;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+
         }
 
+        nav a:last-child {
+            float: right;
+            color: white;
+            background: rgba(33, 33, 33, 0.5);
+        }
+
+        nav a:first-child {
+            color: white;
+            background: rgba(33, 33, 33, 0.5);
+        }
+
+        i {
+            padding-right: 0.8em;
+
+        }
+
+        nav:hover {
+            background: rgba(200, 200, 200, 0.5);
+        }
+
+        nav a:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* .container { */
+
+        /* max-width: 100%; */
+
+        /* } */
+
+        .row {
+            position: relative;
+            overflow: hidden;
+            /* min-height: 100vh; */
+        }
+
+        .row img {
+            z-index: -1;
+        }
+
+        div.text {
+            background: rgba(38, 82, 124, 0.5);
+            padding: 1vw 2vw;
+            border-radius: 3vw;
+            margin: 15vh 2vw;
+            z-index: 1;
+            overflow: hidden;
+
+        }
+
+        .size6 {
+            width: 60%;
+        }
+
+        .size4 {
+            width: 45%;
+        }
+
+        .size10 {
+            width: 100%;
+        }
+
+        .pHead {
+            position: relative;
+            top: 1vw;
+            right: 1vh;
+        }
+
+        .pLeft {
+            float: left;
+        }
+
+        .pRight {
+            float: right;
+        }
+
+        .text h1 {
+            font-size: 2.5vw;
+            color: #ddd;
+        }
+
+
+        .text p,
+        .text li {
+            font-size: 1.5vw;
+            color: #ddd;
+        }
+
+        .text h3 {
+            font-size: 2vw;
+            color: #ddd;
+        }
+
+        .bgimg {
+            z-index: -1;
+            width: 100%
+        }
 
         div.sidebar {
             content: "";
             position: relative;
-
         }
 
         div.sidebar::before {
             content: "";
-            width: 9px;
-            height: 9px;
+            width: 1em;
+            height: 1em;
             border-radius: 50%;
             text-align: center;
             display: inline-block;
-            background-color: #979797;
+            background-color: #ddd;
             margin-top: 0px;
             margin-left: 0.5px;
             z-index: 1;
@@ -99,205 +165,95 @@
         div.sidebar::after {
             content: "";
             width: 1px;
-            height: 109%;
-            background-color: #979797;
+            height: 150%;
+            background-color: #ddd;
             display: block;
-            margin-left: 4.5px;
-            z-index: 0;
+            margin-left: 0.5;
+            z-index: 1;
             position: absolute;
-            left: 0px;
+            left: 0em;
             top: 1.6em;
         }
 
         div.sidebarl::before {
             content: "";
-            width: 9px;
-            height: 9px;
+            width: 1em;
+            height: 1em;
             border-radius: 50%;
             text-align: center;
             display: inline-block;
-            background-color: #979797;
+            background-color: #ddd;
             margin-top: 0px;
             margin-left: 0.5px;
             z-index: 1;
             position: relative;
-            top: 1.6em;
-        }
-
-        .content h3.title {
-            margin: 0px;
-            padding-top: 0px;
-            color: rgb(7, 57, 107);
-            text-align: left;
-        }
-        h3 {
-            font-size:24px;
-            margin:6px;            
-        }
-
-        h3.subtitle {
-            text-align: center;
-            margin: 1em, 0px;
-            /* border-left: 5px steelblue solid; */
-            text-decoration: underline;
-
-        }
-
-        h3.subtitle i {
-            font-size: 1.5em;
-            padding-right: 10px;
+            top: 3em;
         }
 
         div.content {
-            margin-left: 2em;
-            padding: 0.5em;
-            position: relative;
+            padding: 0 4vw;
         }
 
-        .bl {
-            border-bottom: 2px #ccc solid;
+        footer {
+            background: #333;
+            padding: 0vw 5vw 4vw;
+            color: white;
+            overflow: hidden;
         }
 
-        h1,
-        h2 {
-            text-align: center;
-            margin-bottom: 0px;
-            width: 100%;
+        footer h3 {
+            font-size: 2vw;
         }
 
-        div.bluebox {
-            padding: 1em;
-            background: steelblue;
-            /* color: #ddd; */
+        footer a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
         }
 
-        div.bluebox>div {
-            padding: 0em 2em;
-        }
-
-        p {
-            text-indent: 2em;
+        @media screen and(max-width:800px) {
+            div.size4,
+            div.size6,
+            div.size10 {
+                width: 100%;
+            }
         }
     </style>
+    <title>Document</title>
 </head>
 
 <body>
     <div class="container">
-        <header class="block">
-            <img src="img/selfpic.jpg" alt="" class="selfpic rounded-circle">
-            <div class="selfpic">
-                <a href="https://www.facebook.com/opann.lin?ref=bookmarks" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-square fa-2x"></i>
-                </a>
-                <a href="http://opann.wordpress.com" target="_blank" title="WordPress">
-                    <i class="fab fa-wordpress fa-2x"></i>
-                </a>
-                <i class="fas fa-phone-square fa-2x" title="0912-689-669"></i>
-                <a href="mailto:opann.lin@gmail.com">
-                    <i class="fas fa-envelope-square fa-2x" title="opann.lin@gmail.com"></i>
-                </a>
+        <nav class="size10">
+            <a href="#">CA.Lin</a>
+            <a href="#aboutMe">
+                <i class="fas fa-child"></i>About Me</a>
+            <a href="#Experience">
+                <i class="fas fa-address-card"></i>Experience</a>
+            <!-- <a href="#"> -->
+            <!-- <i class="fas fa-wrench"></i>Habits</a> -->
+            <a href="#Contact">
+                <i class="fas fa-phone"></i>Contact</a>
+        </nav>
+
+        <header class="row" style=" background-image:url('img/M10.jpg');background-size:cover;">
+            <!-- <img src="img/M10.jpg" alt="" class="bgimg"> -->
+            <div class="text pHead size6">
                 <h3>林俊安 Chun An Lin</h3>
                 <p>曾經為LED廠工程師,不甘整天做報告, 毅然決然辭掉工作後改作股票投資.
-                    <br>喜歡爬山, 爬過八座百岳, 喜歡上健身房, 也喜歡宅在家聽音樂打電動, 可動可靜(?)
-                    <br>目前在CMoney戰鬥營閉關修練中..
-                    <br>喜歡的一句話:
-                    <b>全心全力做一件事, 你才知道你有多厲害!</b>
+                    <br>喜歡爬山, 爬過八座百岳, 喜歡上健身房, 也喜歡宅在家聽音樂看電影
+                    <br>因為熱愛寫程式, 目前往成為一個程式設計師的目標前進中
                 </p>
+                <h1>"Unless chanllenging yourself,
+                    <br>or you'll never know
+                    <br>how awsome you are!"</h1>
             </div>
         </header>
-        <div class="block">
-            <div class="col">
-                <h3 class="subtitle">
-                    <i class="fas fa-address-card"></i>學經歷</h3>
-                <div>
-                    <div class="sidebar">
-                        <div class="content">
-                            <h3 class="title">國立中央大學</h3>
-                            <ul>
-                                <li>機械系光機電組畢業</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="sidebar">
-                        <div class="content">
-                            <h3 class="title">璨圓光電</h3>
-                            <ul>
-                                <li>2010. 製程整合部工程師</li>
-                                <li>2012. 製程整合部資深工程師</li>
-                                <li>2015. 製程整合二課課長</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <div class="sidebar">
-                        <div class="content">
-
-                            <h3 class="title">專職投資者</h3>
-                            <ul>
-                                <li>2015~2017. 專職投資人 主要投資在股票上</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="sidebarl">
-                        <div class="content">
-
-                            <h3 class="title">CMoney</h3>
-                            <ul>
-                                <li>Basic Html</li>
-                                <li>Basic CSS</li>
-                                <li>Basic C#</li>
-                                <li>潛心修練中...</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <h3 class="subtitle s2">
-                    <i class="fas fa-wrench"></i>技能專長</h3>
-                <div>
-                    <div class="content">
-                        <h3 class="title bl">電腦技能</h3>
-                        <ul>
-                            <li>Microsoft Excel</li>
-                            <li>Microsoft Word</li>
-                            <li>Microsoft Powerpoint</li>
-                            <li>AutoCAD 2010</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div class="content">
-                        <h3 class="title bl">語言能力</h3>
-                        <ul>
-                            <li>中文</li>
-                            <li>英文</li>
-                            <li>日文</li>
-                            <li>一點點的韓文</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div class="content">
-                        <h3 class="title bl">專長</h3>
-                        <ul>
-                            <li>資料分析</li>
-                            <li>Excel VBA</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bluebox block">
-            <div>
-                <h3 class="subtitle"><i class="fas fa-child"></i>關於我</h3>
-
+        <div class="row" ID="aboutMe" style="background-image:url('img/M05.jpg');background-size:cover;">
+            <!-- <img src="img/M05.jpg" alt="" class="bgimg"> -->
+            <div class="text pRight size6">
+                <h3>
+                    <i class="fas fa-child"></i>About me</h3>
                 <p>土生土長的嘉義人, 家中有父母及兩個妹妹. 從小興趣玩模型 組電腦 玩電動, 13歲時買了第一台PC: Acer的Aspire 之後便與電腦結下不解之緣. 現在則是喜歡 登山 健身等戶外的運動, 爬過幾個百岳,
                     最喜歡登山時山上的風景, 看到pm2.5在腳下的感覺很舒壓~</p>
                 <p>大學畢業後, 進入LED界工作, 剛好是個整天跟電腦打招呼的職位, 每天就是與Excel跟Powerpoint奮戰, 整理上萬筆的資料弄出一份老闆看得懂的報告.第一份老闆交代的工作是要把每週又臭又長的報表,使用Excel
@@ -308,12 +264,109 @@
                 <p>現在, 因為看到CMoney正在徵求一群對寫程式有熱誠的人, 便義無反顧的全新投入在這個寫程式的汪洋大海之中..</p>
             </div>
         </div>
-        <div class="block">
+        <div class="row" ID="Experience" style="background-image:url('img/M02.jpg');background-size:cover;">
+            <div class="content">
+                <div class="text pLeft size4">
+                    <h3>
+                        <i class="fas fa-address-card"></i>學經歷
+                    </h3>
+                    <div>
+                        <div class="sidebar">
+                            <div class="content">
+                                <h3 class="title">國立中央大學</h3>
+                                <ul>
+                                    <li>機械系光機電組畢業</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sidebar">
+                            <div class="content">
+                                <h3 class="title">璨圓光電</h3>
+                                <ul>
+                                    <li>2010. 製程整合部工程師</li>
+                                    <li>2012. 製程整合部資深工程師</li>
+                                    <li>2015. 製程整合二課課長</li>
+                                </ul>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div>
+                        <div class="sidebar">
+                            <div class="content">
+
+                                <h3 class="title">專職投資者</h3>
+                                <ul>
+                                    <li>2015~2017. 專職投資人 主要投資標的為股票</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sidebarl">
+                            <div class="content">
+                                <h3 class="title">CMoney</h3>
+                                <ul>
+                                    <li>Basic Html</li>
+                                    <li>Basic CSS</li>
+                                    <li>Basic C#</li>
+                                    <li>潛心修練中...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text pRight size4">
+                    <h3>
+                        <i class="fas fa-wrench"></i>技能專長</h3>
+                    <div>
+                        <div class="content">
+                            <h3 class="title bl">電腦技能</h3>
+                            <ul>
+                                <li>Microsoft Excel</li>
+                                <li>Microsoft Word</li>
+                                <li>Microsoft Powerpoint</li>
+                                <li>AutoCAD 2010</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title bl">語言能力</h3>
+                        <ul>
+                            <li>中文</li>
+                            <li>英文</li>
+                            <li>日文</li>
+                            <li>一點點的韓文</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3 class="title bl">專長</h3>
+                        <ul>
+                            <li>資料分析</li>
+                            <li>Excel VBA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+        <footer ID="Contact">
+            <div style="float:right;">
+                <h3>Contact Me :</h3>
+                <a href="https://www.facebook.com/opann.lin?ref=bookmarks" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-square fa-4x"></i>
+                </a>
+                <a href="http://opann.wordpress.com" target="_blank" title="WordPress">
+                    <i class="fab fa-wordpress fa-4x"></i>
+                </a>
+                <i class="fas fa-phone-square fa-4x" title="0912-689-669"></i>
+                <a href="mailto:opann.lin@gmail.com">
+                    <i class="fas fa-envelope-square fa-4x" title="opann.lin@gmail.com"></i>
+                </a>
+            </div>
+        </footer>
     </div>
-
-
 </body>
 
 </html>
