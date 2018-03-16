@@ -45,8 +45,8 @@
 
         nav a:last-child {
             /* float: right; */
-            position:absolute;
-            right:0px;
+            position: absolute;
+            right: 0px;
             color: white;
             background: rgba(33, 33, 33, 0.5);
         }
@@ -84,10 +84,8 @@
             background: rgba(38, 82, 124, 0.5);
             padding: 1vw 2vw;
             border-radius: 3vw;
-            margin: 15vh 2vw;
             /* z-index: 1; */
             /* overflow: hidden; */
-
         }
 
         .size6 {
@@ -102,29 +100,21 @@
             width: 100%;
         }
 
-        @media screen and(max-width:800px) {
-            .size4,.size6{
-                width: 100%;
-            }
-        }
-        @media screen and(max-width:800px) {
-            div.pLeft,
-            div.pRight {
-                float:none;
-            }
-        }
         .pHead {
             position: relative;
             top: 1vw;
             right: 1vh;
+            margin: 15vh 2vw;
         }
 
         .pLeft {
             float: left;
+            margin: 15vh 2vw;
         }
 
         .pRight {
             float: right;
+            margin: 15vh 2vw;
         }
 
         .text h1 {
@@ -145,56 +135,10 @@
         }
 
 
-        div.sidebar {
-            content: "";
-            position: relative;
-        }
 
-        div.sidebar::before {
-            content: "";
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            text-align: center;
-            display: inline-block;
-            background-color: #ddd;
-            margin-top: 0px;
-            margin-left: 0.5px;
-            z-index: 1;
-            position: absolute;
-            top: 1em;
-        }
-
-        div.sidebar::after {
-            content: "";
-            width: 1px;
-            height: 150%;
-            background-color: #ddd;
-            display: block;
-            margin-left: 0.5;
-            z-index: 1;
-            position: absolute;
-            left: 0em;
-            top: 1.6em;
-        }
-
-        div.sidebarl::before {
-            content: "";
-            width: 1em;
-            height: 1em;
-            border-radius: 50%;
-            text-align: center;
-            display: inline-block;
-            background-color: #ddd;
-            margin-top: 0px;
-            margin-left: 0.5px;
-            z-index: 1;
-            position: relative;
-            top: 3em;
-        }
 
         div.content {
-            padding: 0 4vw;
+            /* padding: 0 4vw; */
         }
 
         footer {
@@ -214,7 +158,20 @@
             display: inline-block;
         }
 
+        @media only screen and (max-width: 1024px) {
+            .size4,
+            .size6 {
+                width: 100%;
+            }
 
+            div.pLeft,
+            div.pRight {
+                clear: both;
+                float: none;
+                margin: 0px;
+            }
+            div.row{height:auto;
+        }
     </style>
     <title>Document</title>
 </head>
@@ -265,67 +222,48 @@
                     <h3>
                         <i class="fas fa-address-card"></i>學經歷
                     </h3>
-                    <div>
-                        <div class="sidebar">
-                            <div class="content">
-                                <h3 class="title">國立中央大學</h3>
-                                <ul>
-                                    <li>機械系光機電組畢業</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h3 class="title">國立中央大學</h3>
+                        <ul>
+                            <li>機械系光機電組畢業</li>
+                        </ul>
                     </div>
-                    <div>
-                        <div class="sidebar">
-                            <div class="content">
-                                <h3 class="title">璨圓光電</h3>
-                                <ul>
-                                    <li>2010. 製程整合部工程師</li>
-                                    <li>2012. 製程整合部資深工程師</li>
-                                    <li>2015. 製程整合二課課長</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h3 class="title">璨圓光電</h3>
+                        <ul>
+                            <li>2010. 製程整合部工程師</li>
+                            <li>2012. 製程整合部資深工程師</li>
+                            <li>2015. 製程整合二課課長</li>
+                        </ul>
+                    </div>
+                    <div class="content">
 
+                        <h3 class="title">專職投資者</h3>
+                        <ul>
+                            <li>2015~2017. 專職投資人 主要投資標的為股票</li>
+                        </ul>
                     </div>
-                    <div>
-                        <div class="sidebar">
-                            <div class="content">
-
-                                <h3 class="title">專職投資者</h3>
-                                <ul>
-                                    <li>2015~2017. 專職投資人 主要投資標的為股票</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="sidebarl">
-                            <div class="content">
-                                <h3 class="title">CMoney</h3>
-                                <ul>
-                                    <li>Basic Html</li>
-                                    <li>Basic CSS</li>
-                                    <li>Basic C#</li>
-                                    <li>潛心修練中...</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h3 class="title">CMoney</h3>
+                        <ul>
+                            <li>Basic Html</li>
+                            <li>Basic CSS</li>
+                            <li>Basic C#</li>
+                            <li>潛心修練中...</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="text pRight size4">
                     <h3>
                         <i class="fas fa-wrench"></i>技能專長</h3>
-                    <div>
-                        <div class="content">
-                            <h3 class="title bl">電腦技能</h3>
-                            <ul>
-                                <li>Microsoft Excel</li>
-                                <li>Microsoft Word</li>
-                                <li>Microsoft Powerpoint</li>
-                                <li>AutoCAD 2010</li>
-                            </ul>
-                        </div>
+                    <div class="content">
+                        <h3 class="title bl">電腦技能</h3>
+                        <ul>
+                            <li>Microsoft Excel</li>
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Powerpoint</li>
+                            <li>AutoCAD 2010</li>
+                        </ul>
                     </div>
                     <div class="content">
                         <h3 class="title bl">語言能力</h3>
