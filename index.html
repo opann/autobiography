@@ -34,8 +34,8 @@
 
         nav a {
             font-size: 1.5vw;
-            display: block;
-            float: left;
+            display: inline-block;
+            /* float: left; */
             padding: 0.5em 1em;
             text-decoration: none;
             color: black;
@@ -44,7 +44,9 @@
         }
 
         nav a:last-child {
-            float: right;
+            /* float: right; */
+            position:absolute;
+            right:0px;
             color: white;
             background: rgba(33, 33, 33, 0.5);
         }
@@ -67,12 +69,6 @@
             background: #333;
             color: white;
         }
-
-        /* .container { */
-
-        /* max-width: 100%; */
-
-        /* } */
 
         .row {
             position: relative;
@@ -106,6 +102,17 @@
             width: 100%;
         }
 
+        @media screen and(max-width:800px) {
+            .size4,.size6{
+                width: 100%;
+            }
+        }
+        @media screen and(max-width:800px) {
+            div.pLeft,
+            div.pRight {
+                float:none;
+            }
+        }
         .pHead {
             position: relative;
             top: 1vw;
@@ -207,17 +214,7 @@
             display: inline-block;
         }
 
-        @media screen and(max-width:800px) {
-            div.size4{
-                width: 100%;
-            }
-        }
-        @media screen and(max-width:800px) {
-            div.pLeft,
-            div.pRight {
-                float:none;
-            }
-        }
+
     </style>
     <title>Document</title>
 </head>
