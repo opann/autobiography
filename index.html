@@ -89,8 +89,8 @@
             padding: 1vw 2vw;
             border-radius: 3vw;
             margin: 15vh 2vw;
-            z-index: 1;
-            overflow: hidden;
+            /* z-index: 1; */
+            /* overflow: hidden; */
 
         }
 
@@ -137,10 +137,6 @@
             color: #ddd;
         }
 
-        .bgimg {
-            z-index: -1;
-            width: 100%
-        }
 
         div.sidebar {
             content: "";
@@ -195,7 +191,7 @@
         }
 
         footer {
-            background: #333;
+            background: rgb(19, 82, 124);
             padding: 0vw 5vw 4vw;
             color: white;
             overflow: hidden;
@@ -212,10 +208,14 @@
         }
 
         @media screen and(max-width:800px) {
-            div.size4,
-            div.size6,
-            div.size10 {
+            div.size4{
                 width: 100%;
+            }
+        }
+        @media screen and(max-width:800px) {
+            div.pLeft,
+            div.pRight {
+                float:none;
             }
         }
     </style>
@@ -237,7 +237,6 @@
         </nav>
 
         <header class="row" style=" background-image:url('img/M10.jpg');background-size:cover;">
-            <!-- <img src="img/M10.jpg" alt="" class="bgimg"> -->
             <div class="text pHead size6">
                 <h3>林俊安 Chun An Lin</h3>
                 <p>曾經為LED廠工程師,不甘整天做報告, 毅然決然辭掉工作後改作股票投資.
@@ -250,7 +249,6 @@
             </div>
         </header>
         <div class="row" ID="aboutMe" style="background-image:url('img/M05.jpg');background-size:cover;">
-            <!-- <img src="img/M05.jpg" alt="" class="bgimg"> -->
             <div class="text pRight size6">
                 <h3>
                     <i class="fas fa-child"></i>About me</h3>
